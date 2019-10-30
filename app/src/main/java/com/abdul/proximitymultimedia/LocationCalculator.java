@@ -22,12 +22,12 @@ public class LocationCalculator {
 
         location = new Location("");
         location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_2.getLattitude()));
-        location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_2.getLongitude()));
+        location.setLongitude(Double.parseDouble(LocationsEnum.LOCATION_2.getLongitude()));
         predefinedLocations.put(LocationsEnum.LOCATION_2.getIdentifier(), location);
 
         location = new Location("");
         location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_3.getLattitude()));
-        location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_3.getLongitude()));
+        location.setLongitude(Double.parseDouble(LocationsEnum.LOCATION_3.getLongitude()));
         predefinedLocations.put(LocationsEnum.LOCATION_3.getIdentifier(), location);
 
         Log.i("tag","Predefined locations map set");
@@ -78,12 +78,13 @@ public class LocationCalculator {
      */
     private Map<String, Double> distanceFromAllPredefinedLocations(Location currLocation) {
         Map<String, Double> distFromAllPreDefLocations = new HashMap<>();
-
+        Log.i("Tag", "Current location is Latt: "+currLocation.getLatitude()+" Long: "+currLocation.getLongitude());
         for(Map.Entry<String, Location> entry: predefinedLocations.entrySet()) {
-            Log.i("Tag", "Calculating distance of "+entry.getKey()+" from current location");
+            Log.i("Tag", "Calculating distance of "+entry.getKey()+"Latt: "+entry.getValue().getLatitude()+"Long: "+entry.getValue().getLongitude()+" from current location");
             Location location = entry.getValue();
             double distance = calculateDistance(currLocation, location);
             distFromAllPreDefLocations.put(entry.getKey(), distance);
+            Log.i("Tag", "Distance of "+entry.getKey()+" from current location is: "+Double.toString(distance));
         }
         Log.i("Tag","Finished calculating distances from all predefined locations");
         return distFromAllPreDefLocations;
