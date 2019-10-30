@@ -25,6 +25,11 @@ public class LocationCalculator {
         location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_2.getLongitude()));
         predefinedLocations.put(LocationsEnum.LOCATION_2.getIdentifier(), location);
 
+        location = new Location("");
+        location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_3.getLattitude()));
+        location.setLatitude(Double.parseDouble(LocationsEnum.LOCATION_3.getLongitude()));
+        predefinedLocations.put(LocationsEnum.LOCATION_3.getIdentifier(), location);
+
         Log.i("tag","Predefined locations map set");
     }
 

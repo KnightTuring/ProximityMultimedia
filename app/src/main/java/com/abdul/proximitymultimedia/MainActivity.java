@@ -251,6 +251,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (locationIdentifier == null) {
             // nothing to do
             textViewLogger.append("Not within 800m of any predefined location, no audio will be played\n");
+            stopService(objIntent);
             return;
         } else {
             // play media

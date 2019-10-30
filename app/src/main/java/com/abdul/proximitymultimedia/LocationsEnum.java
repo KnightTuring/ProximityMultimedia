@@ -4,7 +4,8 @@ public enum LocationsEnum {
     // 18.619166, 73.771446 -> Thergaon
     // 18.579125, 73.737141 -> Qubix
     LOCATION_1("18.619166"," 73.771446","location1"),
-    LOCATION_2("18.579125","73.737141","location2");
+    LOCATION_2("18.579125","73.737141","location2"),
+    LOCATION_3("33.3743153","74.2953259","location3");
 
     private final String lattitude;
     private final String longitude;
