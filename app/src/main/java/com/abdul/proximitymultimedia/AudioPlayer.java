@@ -13,7 +13,7 @@ public class AudioPlayer extends Service {
 
     String LOG_TAG = "Media Player";
     public static int CURR_MEDIA_ID = 999;
-    MediaPlayer mediaPlayerObj;
+    MediaPlayer mediaPlayerObj = null;
 
     /**
      *
@@ -77,8 +77,10 @@ public class AudioPlayer extends Service {
     }
 
     public void onDestroy() {
-        mediaPlayerObj.stop();
-        mediaPlayerObj.release();
+        if(mediaPlayerObj != null) {
+            mediaPlayerObj.stop();
+            mediaPlayerObj.release();
+        }
     }
     @Nullable
     @Override
