@@ -1,11 +1,12 @@
 package com.abdul.proximitymultimedia;
 
 public enum LocationsEnum {
+    // "33.374315"," 74.295325","location1"
     // 18.619166, 73.771446 -> Thergaon
     // 18.579125, 73.737141 -> Qubix
     LOCATION_1("33.374315"," 74.295325","location1"),
-    LOCATION_2("18.579125","73.737141","location2"),
-    LOCATION_3("18.619166","73.771446","location3");
+    LOCATION_2("18.619153","73.771517","location2_empress"),
+    LOCATION_3("18.616820", "73.770660","location3_greensend");
 
     private final String lattitude;
     private final String longitude;

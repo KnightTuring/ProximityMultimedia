@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class LocationCalculator {
 
-    double THREHOLD_DISTANCE_IN_METERS = 800;
+    double THREHOLD_DISTANCE_IN_METERS = 100;
     Map<String, Location> predefinedLocations;
 
     LocationCalculator() {

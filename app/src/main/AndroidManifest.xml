@@ -23,7 +23,7 @@
         </activity>
 
         <service android:name=".AudioPlayer"  android:enabled="true"></service>
-
+        <service android:name=".ProximityService"  android:enabled="true"></service>
     </application>
 
 </manifest>
